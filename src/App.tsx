@@ -64,7 +64,7 @@ function App() {
   }, []);
 
   return (
-    <div
+    <main
       style={{
         maxWidth: '800px',
         display: 'flex',
@@ -74,10 +74,10 @@ function App() {
         alignItems: 'center',
       }}
     >
-      <div style={{ fontSize: '2rem', textAlign: 'center' }}>
+      <h1 style={{ fontSize: '2rem', textAlign: 'center' }}>
         {isWinner && 'Winner! - Refresh to try again'}
         {isLoser && 'Nice Try - Refresh to try again'}
-      </div>
+      </h1>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord
         reveal={isLoser}
@@ -94,7 +94,7 @@ function App() {
           addGuessedLetter={addGuessedLetter}
         />
       </div>
-    </div>
+    </main>
   );
 }
 
